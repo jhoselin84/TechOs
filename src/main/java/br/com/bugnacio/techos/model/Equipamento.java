@@ -18,11 +18,11 @@ public class Equipamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull(message = "O tipo de equipamento e obrigatorio")
+    @NotNull(message = "Escolha o tipo")
     @Enumerated(EnumType.STRING)
     private TipoEquipamento tipo;
 
-    @NotBlank(message = "A marca e obrigatorio")
+    @NotBlank(message = "Informe a marca")
     private String marca;
 
     private String numeroSerie;
