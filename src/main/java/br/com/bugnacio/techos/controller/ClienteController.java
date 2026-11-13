@@ -41,7 +41,7 @@ public class ClienteController {
         return "clientes/lista";
     }
 
-    // CREATE (1/2): formulario vazi
+    // CREATE (1/2): formulario vazio
     @GetMapping("/novo")
     public String novo(Model model) {
         model.addAttribute("cliente", new Cliente());

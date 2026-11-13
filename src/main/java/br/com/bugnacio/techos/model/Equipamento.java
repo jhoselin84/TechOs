@@ -25,17 +25,20 @@ public class Equipamento {
     @NotBlank(message = "Informe a marca")
     private String marca;
 
+    @NotBlank(message = "Informe o modelo")
+    private String modelo;
+
+    @NotBlank(message = "Informe o número de série")
     private String numeroSerie;
 
+    @NotNull(message = "Selecione o cliente")
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    private String modelo;
-
     public Equipamento() {
     }
-//get set
+
     public Long getId() {
         return id;
     }
