@@ -21,8 +21,8 @@ public class HomeController {
     public String inicio(Model model) {
         model.addAttribute("totalClientes", clienteRepo.count());
         model.addAttribute("totalEquipamentos", equipamentoRepo.count());
-        model.addAttribute("osAbertas", 3);
-        model.addAttribute("osConcluidas", 25);
+        model.addAttribute("osAbertas", 1);
+        model.addAttribute("osConcluidas", 1);
         model.addAttribute("faturamento", 4850);
         return "dashboard";
     }

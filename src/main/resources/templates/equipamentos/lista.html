@@ -33,6 +33,7 @@
   <div class="alert alert-danger mb-0" th:if="${erro != null}" th:text="${erro}">Algo deu errado.</div>
 </div>
 
+
 <!-- CONTEÚDO DA TELA -->
 <main class="container-xl py-4">
 
@@ -40,6 +41,18 @@
     <h1 class="h3">Equipamentos</h1>
     <a class="btn btn-primary" th:href="@{/equipamentos/novo}">Novo equipamento</a>
   </div>
+
+<!-- BOTÃO BUSCAR -->
+<form class="row g-2 mb-3" method="get" th:action="@{/equipamentos}">
+    <div class="col-12 col-sm-8 col-md-5">
+      <input type="search" name="busca" class="form-control" placeholder="Buscar por marca, modelo, série ou cliente"
+             aria-label="Buscar equipamento" th:value="${busca}">
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+    </div>
+  </form>
+
 
   <div class="panel" th:if="${equipamentos.isEmpty()}">
     <div class="empty">

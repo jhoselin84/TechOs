@@ -88,9 +88,7 @@ public class ClienteController {
                     "Já existe um cliente com esse telefone.");
         }
 
-        // Verifica se ocorreu algum erro de validação.
-        // Pode ser um campo obrigatório vazio, e-mail inválido
-        // ou telefone duplicado, por exemplo.
+       
         if (result.hasErrors()) {
 
             // Retorna ao formulário para o usuário corrigir os dados.
@@ -98,9 +96,7 @@ public class ClienteController {
             return "clientes/form";
         }
 
-        // Se chegou até aqui, significa que os dados estão válidos.
-        // O Spring Data JPA identifica se deve inserir ou atualizar
-        // conforme o ID recebido.
+        
         repo.save(cliente);
 
         // Define a mensagem de acordo com a operação realizada.

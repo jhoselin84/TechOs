@@ -38,7 +38,7 @@ public class EquipamentoController {
         model.addAttribute("equipamentos", equipamentoRepository.findAll());
         return "equipamentos/lista";
     }
-
+    
     //novo
      @GetMapping("/novo")
     public String novo(Model model) {
